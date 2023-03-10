@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "API": {
+      "value": true
+    },
+    "KeyVaultName": {
+      "value": "kv1dmuksouth"
+    },
+    "hostingPlan": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/289c3000-0b96-4081-8117-a0a3021b519f/resourceGroups/rg-keyvault-dm-uksouth/providers/Microsoft.KeyVault/vaults/kv1dmuksouth"
+        },
+        "secretName": "HostingIdAPI"
+      }
+    },
+    "AppInsightsKey": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/289c3000-0b96-4081-8117-a0a3021b519f/resourceGroups/rg-keyvault-dm-uksouth/providers/Microsoft.KeyVault/vaults/kv1dmuksouth"
+        },
+        "secretName": "appinsightskey"
+      }
+    },
+    "AppInsightsConnectionString": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/289c3000-0b96-4081-8117-a0a3021b519f/resourceGroups/rg-keyvault-dm-uksouth/providers/Microsoft.KeyVault/vaults/kv1dmuksouth"
+        },
+        "secretName": "AppInsightsConnectionString"
+      }
+    },
+    "Environment": {
+      "value": "dm"
+    },
+    "PrimaryLocation": {
+      "value": "uksouth"
+    },
+    "appName": {
+      "value": "test87dhdyyda6"
+    }
+  }
+}

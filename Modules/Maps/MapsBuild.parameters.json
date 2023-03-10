@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "Environment": {
+      "value": "dm"
+    },
+    "MapLocation": {
+      "value": "westeurope"
+    },
+    "MapSKU": {
+      "value": "S0"
+    },
+    "MapKind": {
+      "value": "Gen1"
+    },
+    "MapStorageAccountname": {
+      "value": "strmapdmdefault"
+    },
+    "MapAccountname": {
+      "value": "azuremap-dm-westeurope"
+    },
+    "MapStorageId": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/289c3000-0b96-4081-8117-a0a3021b519f/resourceGroups/rg-keyvault-dm-uksouth/providers/Microsoft.KeyVault/vaults/kv1dmuksouth"
+        },
+        "secretName": "StorageId-strdmmaps"
+      }
+    }
+  }
+}

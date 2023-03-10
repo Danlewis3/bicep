@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "StorageAccounts":{
+      "value":[
+        {
+          "name": "",
+          "location":"uksouth",
+          "type": "Standard_LRS"
+        }
+      ]
+    },
+
+    "Environment": {
+      "value": "__Environment__"
+    },
+    "PrimaryLocation": {
+      "value": "__PrimaryLocation__"
+    },
+    "allowBlobPublicAccess": {
+      "value": false
+    },
+    "KeyVaultName": {
+      "value": "__KeyVaultName__"
+    }
+  }
+}

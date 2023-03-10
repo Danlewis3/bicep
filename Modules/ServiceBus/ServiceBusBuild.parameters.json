@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "Environment": {
+      "value": "dm"
+    },
+    "PrimaryLocation": {
+      "value": "uksouth"
+    },
+    "KeyVaultName": {
+      "value": "kv1dmuksouth"
+    },
+    "ServiceBusSKU": {
+      "value": "Standard"
+    },
+    "TopicName": {
+      "value": "appconfigurationtopic"
+    },
+    "autoDeleteOnIdle": {
+      "value": "P14D"
+    },
+    "defaultMessageTimeToLive": {
+      "value": "P14D"
+    },
+    "subscriptionName": {
+      "value": "AppConfigurationSubscription"
+    },
+    "QueueNames":{
+      "value":
+        [
+        "communicationsmsqueue",
+        "communicationemailqueue",
+        "communicationnotificationqueue",
+        "communicationserviceresponsequeue"
+        ]
+    }
+  }
+}

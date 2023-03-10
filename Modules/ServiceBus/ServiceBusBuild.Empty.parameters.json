@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "Environment": {
+      "value": "__Environment__"
+    },
+    "PrimaryLocation": {
+      "value": "__PrimaryLocation__"
+    },
+    "KeyVaultName": {
+      "value": "__KeyVaultName__"
+    },
+    "ServiceBusSKU": {
+      "value": "__ServiceBusSKU__"
+    },
+    "TopicName": {
+      "value": "__TopicName__"
+    },
+    "autoDeleteOnIdle": {
+      "value": "__autoDeleteOnIdle__"
+    },
+    "defaultMessageTimeToLive": {
+      "value": "__defaultMessageTimeToLive__"
+    },
+    "subscriptionName": {
+      "value": "__subscriptionName__"
+    },
+    "QueueNames":{
+      "value":
+        [
+         "__QueueNames__"
+        ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "Environment": {
+            "value": "dm"
+          },
+          "PrimaryLocation": {
+            "value": "uksouth"
+          },
+          "KeyVaultName": {
+            "value": "kv1dmuksouth"
+          },
+          "hostingplans":{
+            "value":[
+              {
+                "name": "appsvcplanlinux-ui-dm-uksouth",
+                "HostingTier":"B3",
+                "AppServicePlanKind":"linux",
+                "Tier": "Dynamic",
+                "secretname": "AppSrvPlanUI",
+                "secretid": "HostingIdUI"
+              },
+              {
+                "name": "appsvcplanlinux-api-dm-uksouth",
+                "HostingTier":"B3",
+                "AppServicePlanKind":"linux",
+                "Tier": "Dynamic",
+                "secretname": "AppSrvPlanAPI",
+                "secretid": "HostingIdAPI"
+              },
+              {
+                "name": "appsvcplanlinux-functions-dm-uksouth",
+                "HostingTier":"B3",
+                "AppServicePlanKind":"linux",
+                "Tier": "Dynamic",
+                "secretname": "AppSrvPlanFunctions",
+                "secretid": "HostingIdFunctions"
+              }
+            ]
+          }
+    }
+}

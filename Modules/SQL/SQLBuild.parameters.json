@@ -1,0 +1,72 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "sqlAdministratorLogin": {
+      "value": "SQLAdmin"
+    },
+    "Environment": {
+      "value": "dm"
+    },
+    "skucapacity": {
+      "value": 10
+    },
+    "KeyVaultName": {
+      "value": "kv1dmuksouth"
+    },
+    "skuname": {
+      "value": "S0"
+    },
+    "skutier": {
+      "value": "Standard"
+    },
+    "PrimaryLocation": {
+      "value": "uksouth"
+    },
+    "SecondaryLocation": {
+      "value": "ukwest"
+    },
+    "PrimarySQLServerName": {
+      "value": "az12-dm-uksouth"
+    },
+    "SecondarySQLServerName": {
+      "value": "az12-dm-ukwest"
+    },
+    "Database":{
+      "value":[
+        {
+          "name": "WokinghamDataMigration-dm",
+          "skucapacity":"10",
+          "skuname": "S0",
+          "skutier":"Standard",
+          "ReplicaEnabled": false,
+          "SandboxEnabled": false
+        },
+        {
+          "name": "Freedom-dm",
+          "skucapacity":"10",
+          "skuname": "S0",
+          "skutier":"Standard",
+          "ReplicaEnabled": true,
+          "SandboxEnabled": false
+        }
+      ]
+    },
+    "SQLServer":{
+      "value":[
+        {
+          "name": "az12-dm-uksouth",
+          "location": "uksouth"
+        },
+        {
+          "name": "az12-dm-ukwest",
+          "location": "ukwest"
+        },
+        {
+          "name": "sandbox-dm-ukwest",
+          "location": "uksouth"
+        }
+      ]
+    }
+  }
+}

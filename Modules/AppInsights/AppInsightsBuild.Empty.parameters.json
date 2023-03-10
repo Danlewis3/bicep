@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "Environment": {
+      "value": "__Environment__"
+    },
+    "KeyVaultName": {
+      "value": "__KeyVaultName__"
+    },
+    "PrimaryLocation": {
+      "value": "__PrimaryLocation__"
+    },
+    "principalId": {
+      "value": "__principalId__"
+    },
+    "principalType": {
+      "value": "__principalType__"
+    },
+    "roleName": {
+      "value": "__roleName__"
+    }
+  }
+}

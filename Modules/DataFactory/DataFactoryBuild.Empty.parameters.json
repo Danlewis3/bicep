@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "Environment": {
+      "value": "__Environment__"
+    },
+    "PrimaryLocation": {
+      "value": "__PrimaryLocation__"
+    },
+    "projectName": {
+      "value": "__projectName__"
+    },
+    "repositoryName": {
+      "value": "__repositoryName__"
+    },
+    "accountName": {
+      "value": "__accountName__"
+    },
+    "collaborationBranch": {
+      "value": "__collaborationBranch__"
+    },
+    "rootFolder": {
+      "value": "/azuredatafactory/src"
+    },
+    "dataFactoryName": {
+      "value": "__dataFactoryName__"
+    },
+    "principalId": {
+      "value": "__principalId__"
+    },
+    "principalType": {
+      "value": "__Group__"
+    },
+    "roleName": {
+      "value": "__roleName__"
+    }
+  }
+}

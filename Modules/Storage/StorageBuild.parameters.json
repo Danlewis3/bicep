@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "StorageAccounts":{
+      "value":[
+        {
+          "name": "teststru11",
+          "location":"uksouth",
+          "type": "Standard_LRS"
+        },
+        {
+          "name": "strdmmaps",
+          "location":"westeurope",
+          "type": "Standard_LRS"
+        }
+      ]
+    },
+
+    "Environment": {
+      "value": "dm"
+    },
+    "PrimaryLocation": {
+      "value": "uksouth"
+    },
+    "allowBlobPublicAccess": {
+      "value": false
+    },
+    "KeyVaultName": {
+      "value": "kv1dmuksouth"
+    }
+  }
+}

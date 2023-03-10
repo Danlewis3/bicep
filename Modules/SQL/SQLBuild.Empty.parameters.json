@@ -1,0 +1,80 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "sqlAdministratorLogin": {
+        "value": "SQLAdmin"
+      },
+      "Environment": {
+        "value": "__Environment__"
+      },
+      "skucapacity": {
+        "value": __skucapacity__
+      },
+      "KeyVaultName": {
+        "value": "__KeyVaultName__"
+      },
+      "skuname": {
+        "value": "__skuname__"
+      },
+      "skutier": {
+        "value": "__skutier__"
+      },
+      "PrimaryLocation": {
+        "value": "uksouth"
+      },
+      "SecondaryLocation": {
+        "value": "ukwest"
+      },
+      "PrimarySQLServerName": {
+        "value": "__PrimarySQLServerName__"
+      },
+      "SecondarySQLServerName": {
+        "value": "__SecondarySQLServerName__"
+      },
+      "Database":{
+        "value":[
+          {
+            "name": "WokinghamDataMigration-dm",
+            "skucapacity":"__skucapacity__",
+            "skuname": "__skuname__",
+            "skutier":"__skutier__",
+            "ReplicaEnabled": false,
+            "SandboxEnabled": false
+          },
+          {
+            "name": "Freedom-dm",
+            "skucapacity":"__skucapacity__",
+            "skuname": "__skuname__",
+            "skutier":"__skutier__",
+            "ReplicaEnabled": true,
+            "SandboxEnabled": false
+          },
+          {
+            "name": "CommunicationService-dm",
+            "skucapacity":"__skucapacity__",
+            "skuname": "__skuname__",
+            "skutier":"__skutier__",
+            "ReplicaEnabled": false,
+            "SandboxEnabled": false
+          }
+        ]
+      },
+      "SQLServer":{
+        "value":[
+          {
+            "name": "__PrimarySQLServerName__",
+            "location": "uksouth"
+          },
+          {
+            "name": "__SecondarySQLServerName__",
+            "location": "ukwest"
+          },
+          {
+            "name": "__SandboxSQLServerName__",
+            "location": "uksouth"
+          }
+        ]
+      }
+    }
+  }
